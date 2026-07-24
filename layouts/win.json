@@ -213,13 +213,14 @@
           11,
           11
         ],
+        "__onTap": "M.openLevel('level_2')",
         "__size": [
           321,
           94
         ],
         "__scaleF": 0,
         "__text": {
-          "__text": "try_again"
+          "__text": "Next level"
         },
         "__keyframes": {
           "loop": 0,
