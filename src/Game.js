@@ -40,8 +40,14 @@ var Game = {
         showWindow('win', function(wnd) {
             wnd.__setAliasesData({
                 button: {
+                    __text: Game.currentLevelIndex === 3 ? "Пройти игру заново" : "Следующий уровень",
                     __onTap: function() {
-                        Game.currentLevelIndex++;
+                        wnd.__close();
+                        if (Game.currentLevelIndex === 3) {
+                            Game.currentLevelIndex = 1;
+                        } else {
+                            Game.currentLevelIndex++;
+                        }
                         Game.loadLevel(Game.currentLevelIndex);
                     },
                     __onTapHighlight: 1

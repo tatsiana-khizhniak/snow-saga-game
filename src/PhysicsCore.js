@@ -60,7 +60,6 @@ function removeBlock(block) {
         }
 
         big_blocks--;
-
         if (big_blocks === 0) {
             _setTimeout(function() {
                 Game.win();
