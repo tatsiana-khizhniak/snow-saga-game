@@ -425,6 +425,237 @@
   }
 ]
 ,
+"layouts/level_3.json":[
+  {
+    "name": "level_3",
+    "__size": [
+      1234,
+      768
+    ],
+    "__childs": {
+      "sky": {
+        "__color": "#7ea2ff",
+        "__size": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "userInputArea": {
+        "__color": "#5f12e9",
+        "sha": 0,
+        "sva": 2,
+        "__size": [
+          140,
+          100
+        ],
+        "__ofs": [
+          105,
+          -96,
+          -15
+        ],
+        "__childs": {
+          "_0": {
+            "__color": "#fb22a0",
+            "__rotate": 3.9,
+            "__size": [
+              25,
+              25
+            ],
+            "__childs": {
+              "rubber": {
+                "__color": "#362207",
+                "sha": 2,
+                "sva": 1,
+                "__size": [
+                  148,
+                  18
+                ]
+              }
+            }
+          }
+        }
+      },
+      "ph_world": {
+        "__size": [
+          1,
+          1
+        ],
+        "__childs": {
+          "_0": {
+            "__physics": {
+              "__isStatic": false,
+              "__friction": 10,
+              "__frictionAir": 1,
+              "__frictionStatic": 50,
+              "__restitution": 0,
+              "__density": 1,
+              "__bodyType": 0
+            },
+            "__rotate": -45,
+            "__img": "block_1",
+            "__size": [
+              139,
+              66
+            ],
+            "__ofs": [
+              -108,
+              -199
+            ]
+          },
+          "ground1": {
+            "__color": "#296b22",
+            "__physics": {
+              "__isStatic": true,
+              "__friction": 10,
+              "__frictionAir": 1,
+              "__frictionStatic": 50,
+              "__restitution": 0,
+              "__density": 1,
+              "__bodyType": 0
+            },
+            "__size": [
+              1234,
+              197
+            ],
+            "__y": 395
+          },
+          "_2": {
+            "__physics": {
+              "__isStatic": false,
+              "__friction": 10,
+              "__frictionAir": 1,
+              "__frictionStatic": 50,
+              "__restitution": 0,
+              "__density": 1,
+              "__bodyType": 0
+            },
+            "__rotate": 49,
+            "__img": "block_2",
+            "__ofs": [
+              320,
+              -94
+            ]
+          },
+          "_3": {
+            "__physics": {
+              "__isStatic": false,
+              "__friction": 10,
+              "__frictionAir": 1,
+              "__frictionStatic": 50,
+              "__restitution": 0,
+              "__density": 1,
+              "__bodyType": 0
+            },
+            "__img": "block_3",
+            "__ofs": [
+              -208,
+              -209
+            ]
+          },
+          "_4": {
+            "__physics": {
+              "__isStatic": false,
+              "__friction": 10,
+              "__frictionAir": 1,
+              "__frictionStatic": 50,
+              "__restitution": 0,
+              "__density": 1,
+              "__bodyType": 0
+            },
+            "__img": "block_3",
+            "__ofs": [
+              431,
+              -78
+            ]
+          },
+          "_5": {
+            "__physics": {
+              "__isStatic": false,
+              "__friction": 10,
+              "__frictionAir": 1,
+              "__frictionStatic": 50,
+              "__restitution": 0,
+              "__density": 1,
+              "__bodyType": 1
+            },
+            "__img": "block_4",
+            "__size": [
+              126,
+              126
+            ],
+            "__ofs": [
+              427,
+              -221
+            ]
+          },
+          "wall": {
+            "__color": "#296b22",
+            "__physics": {
+              "__isStatic": true,
+              "__friction": 10,
+              "__frictionAir": 1,
+              "__frictionStatic": 50,
+              "__restitution": 0,
+              "__density": 1,
+              "__bodyType": 0
+            },
+            "__size": [
+              65,
+              689
+            ],
+            "__ofs": [
+              585,
+              -44
+            ]
+          },
+          "ground2": {
+            "__color": "#296b22",
+            "__physics": {
+              "__isStatic": true,
+              "__friction": 10,
+              "__frictionAir": 1,
+              "__frictionStatic": 50,
+              "__restitution": 0,
+              "__density": 1,
+              "__bodyType": 0
+            },
+            "__size": [
+              421,
+              55
+            ],
+            "__ofs": [
+              344,
+              22
+            ]
+          }
+        }
+      },
+      "ground3": {
+        "__color": "#296b22",
+        "__physics": {
+          "__isStatic": true,
+          "__friction": 10,
+          "__frictionAir": 1,
+          "__frictionStatic": 50,
+          "__restitution": 0,
+          "__density": 1,
+          "__bodyType": 0
+        },
+        "__size": [
+          321,
+          55
+        ],
+        "__ofs": [
+          -149,
+          -106
+        ]
+      }
+    }
+  }
+]
+,
 "layouts/win.json":[
   {
     "__color": "#28362f",
@@ -752,7 +983,7 @@
 ,
 "build_res/atlas-preview-0.json":[["break_7",1,1,9,9,1],["break_6",1,12,12,9,1],["break_8",1,26,15,11,1],["circle1",12,1,22,22,1],["break_5",1,43,25,20,1],["break_9",1,70,36,30,1],["break_3",23,25,41,32,1],["break_4",1,108,39,39,1],["break_2",1,149,48,39,1],["break_1",1,199,48,45,1],["star",42,68,86,88],["block_3",1,249,74,158],["block_1",77,158,124,121,1],["block_2",1,409,183,83],["block_4",130,1,126,131]]
 ,
-"build_res/opts.json":{"options":{"__disableCache":0,"__disableCacheByVer":0,"__storeChildsAsObject":1,"__supportedLangs":["en","ru"],"__defaultTextProperties":{"__fontface":"Roboto_Thin"},"__upscaleResolution":{"x":1234,"y":768},"__localesDir":"lang/","__baseShadersFolder":"shaders/","__baseLayoutsFolder":"layouts/","__baseParticlesFolder":"vfx/","__baseFontsFolder":"fonts/","__baseConfigsFolder":"conf/","__disablePacking":1},"res":[["locale"],["sound","build_res/sounds.json"],["atlas","build_res/atlas-0.png?","build_res/atlas-0.json?"],["effect","tail.effect.json"],["font",["Roboto-Thin"]],["layout","level_1.json","win.json"],["shaders","base.f","c.f","base.v","part.f","part.v","partnc.f","partnc.v"]],"version":"1.0.0"}
+"build_res/opts.json":{"options":{"__disableCache":0,"__disableCacheByVer":0,"__storeChildsAsObject":1,"__supportedLangs":["en","ru"],"__defaultTextProperties":{"__fontface":"Roboto_Thin"},"__upscaleResolution":{"x":1234,"y":768},"__localesDir":"lang/","__baseShadersFolder":"shaders/","__baseLayoutsFolder":"layouts/","__baseParticlesFolder":"vfx/","__baseFontsFolder":"fonts/","__baseConfigsFolder":"conf/","__disablePacking":1},"res":[["locale"],["sound","build_res/sounds.json"],["atlas","build_res/atlas-0.png?","build_res/atlas-0.json?"],["effect","tail.effect.json"],["font",["Roboto-Thin"]],["layout","level_1.json","level_2.json","win.json"],["shaders","base.f","c.f","base.v","part.f","part.v","partnc.f","partnc.v"]],"version":"1.0.0"}
 ,
 "build_res/sounds.json":{
   "src": [

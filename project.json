@@ -29,7 +29,18 @@
         ],
         "src/": [
             "loading.js",
-            "main.js"
+            "main.js",
+            "Game.js",
+            "Level.js",
+            "LevelLoader.js",
+            "LevelInitializer.js",
+            "Block.js",
+            "BlockEffects.js",
+            "RubberController.js",
+            "PhysicsEvents.js",
+            "SoundManager.js",
+            "utils.js",
+            "PhysicsCore.js"
         ],
         "../../eeditor/plugins/": [
             "physics.js",
