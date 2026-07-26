@@ -6,7 +6,11 @@ var LevelInitializer = {
                 Game.rubber = node;
             },
 
-            userInputArea: RubberController.create()
+            userInputArea: RubberController.create(),
+
+            scoreLabel: null,
+            hitsLabel: null,
+            missLabel: null
         });
 
         _setTimeout(function() {
@@ -37,6 +41,8 @@ var LevelInitializer = {
                     PhysicsCore.initCollision(body, node, 100);
                 }
             });
+
+            ScoreManager.updateLevelTexts();
 
         }, 0.01);
     }

@@ -36,18 +36,51 @@ var Game = {
     },
 
     win: function() {
+        console.log('inside win');
+
+        // accuracy bonus
+        ScoreManager.applyAccuracyBonus();
+
+        // FINAL SUMMARY AFTER LEVEL 3
+        if (this.currentLevelIndex === 3) {
+
+            var total = ScoreManager.getTotalStats();
+
+            showWindow('win', function(wnd) {
+                wnd.__setAliasesData({
+                    scoreText: { __text: "Total Score: " + total.score },
+                    hitsText: { __text: "Total Throws: " + total.hits },
+                    missText: { __text: "Total Misses: " + total.misses },
+
+                    button: {
+                        __onTap: function() {
+                            wnd.__close();
+                            Game.currentLevelIndex = 1;
+                            Game.loadLevel(1);
+                        },
+                        __onTapHighlight: 1
+                    }
+                });
+            });
+
+            return;
+        }
+
+        // LEVEL SUMMARY (LEVELS 1 AND 2)
+        var stats = ScoreManager.levelStats[this.currentLevelIndex];
+
         SoundManager.play('win');
+
         showWindow('win', function(wnd) {
             wnd.__setAliasesData({
+                scoreText: { __text: "Score: " + stats.score },
+                hitsText: { __text: "Throws: " + ScoreManager.shotsTotal },
+                missText: { __text: "Misses: " + ScoreManager.shotsMissed },
+
                 button: {
-                    __text: Game.currentLevelIndex === 3 ? "Пройти игру заново" : "Следующий уровень",
                     __onTap: function() {
                         wnd.__close();
-                        if (Game.currentLevelIndex === 3) {
-                            Game.currentLevelIndex = 1;
-                        } else {
-                            Game.currentLevelIndex++;
-                        }
+                        Game.currentLevelIndex++;
                         Game.loadLevel(Game.currentLevelIndex);
                     },
                     __onTapHighlight: 1

@@ -6,6 +6,34 @@
       768
     ],
     "__childs": {
+
+      "scoreLabel": {
+        "__type": "text",
+        "__text": "Score: 0",
+        "__fontsize": 48,
+        "__color": "#ffffff",
+        "__ofs": [0, -330],
+        "__align": "left"
+      },
+
+      "hitsLabel": {
+        "__type": "text",
+        "__text": "Snowballs: 0",
+        "__fontsize": 42,
+        "__color": "#ffffff",
+        "__ofs": [0, -280],
+        "__align": "left"
+      },
+
+      "missLabel": {
+        "__type": "text",
+        "__text": "Misses: 0",
+        "__fontsize": 42,
+        "__color": "#ffffff",
+        "__ofs": [0, -230],
+        "__align": "left"
+      },
+
       "sky": {
         "__color": "#7ea2ff",
         "__size": [

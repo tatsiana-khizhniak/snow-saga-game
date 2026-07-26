@@ -40,7 +40,8 @@
             "PhysicsEvents.js",
             "SoundManager.js",
             "utils.js",
-            "PhysicsCore.js"
+            "PhysicsCore.js",
+            "ScoreManager.js"
         ],
         "../../eeditor/plugins/": [
             "physics.js",

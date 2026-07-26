@@ -1,0 +1,125 @@
+
+temp.png
+size: 2022,808
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+blush-l
+  rotate: false
+  xy: 2, 3
+  size: 39, 19
+  orig: 1410, 770
+  offset: 677, 524
+  index: -1
+blush-r
+  rotate: false
+  xy: 43, 2
+  size: 26, 20
+  orig: 1410, 770
+  offset: 759, 528
+  index: -1
+body
+  rotate: false
+  xy: 1412, 341
+  size: 491, 465
+  orig: 1410, 770
+  offset: 500, 34
+  index: -1
+ear-l
+  rotate: true
+  xy: 131, 33
+  size: 26, 36
+  orig: 1410, 770
+  offset: 624, 522
+  index: -1
+eye-def-l
+  rotate: true
+  xy: 167, 5
+  size: 26, 24
+  orig: 1410, 770
+  offset: 692, 542
+  index: -1
+eye-def-r
+  rotate: true
+  xy: 107, 3
+  size: 20, 24
+  orig: 1410, 770
+  offset: 752, 546
+  index: -1
+eye-smile-l
+  rotate: false
+  xy: 71, 8
+  size: 34, 14
+  orig: 1410, 770
+  offset: 688, 544
+  index: -1
+eye-smile-r
+  rotate: false
+  xy: 169, 43
+  size: 27, 16
+  orig: 1410, 770
+  offset: 748, 546
+  index: -1
+eyebrow-l
+  rotate: false
+  xy: 87, 25
+  size: 42, 34
+  orig: 1410, 770
+  offset: 679, 562
+  index: -1
+eyebrow-r
+  rotate: false
+  xy: 133, 4
+  size: 32, 27
+  orig: 1410, 770
+  offset: 745, 572
+  index: -1
+hand-attac-l
+  rotate: false
+  xy: 1650, 16
+  size: 216, 184
+  orig: 1410, 770
+  offset: 491, 232
+  index: -1
+hand-r
+  rotate: true
+  xy: 1650, 202
+  size: 137, 366
+  orig: 1410, 770
+  offset: 771, 134
+  index: -1
+hand-top-l
+  rotate: false
+  xy: 1868, 19
+  size: 152, 181
+  orig: 1410, 770
+  offset: 496, 311
+  index: -1
+head
+  rotate: true
+  xy: 1412, 102
+  size: 237, 236
+  orig: 1410, 770
+  offset: 581, 417
+  index: -1
+mouth-def
+  rotate: false
+  xy: 2, 24
+  size: 83, 35
+  orig: 1410, 770
+  offset: 692, 485
+  index: -1
+mouth-smile
+  rotate: false
+  xy: 1905, 737
+  size: 103, 69
+  orig: 1410, 770
+  offset: 681, 462
+  index: -1
+Слой 1
+  rotate: false
+  xy: 2, 61
+  size: 1408, 745
+  orig: 1410, 770
+  offset: 1, 1
+  index: -1

@@ -25,24 +25,34 @@ var RubberController = {
                 var velocity = this.__dmouse.__multiplyScalar(0.2);
 
                 var bullet = Game.level.node.__addChildBox({
-                    __effect: 'tail',
-                    __img: 'circle1',
-                    __size: [28, 28],
-                    __ofs: [wp.x, wp.y, -20],
-                    __physics: {
-                        __isStatic: false,
-                        __friction: 130,
-                        __frictionAir: 0.2,
-                        __frictionStatic: 500,
-                        __restitution: 10,
-                        __density: 4,
-                        __bodyType: 1
+                    "__effect": "tail",
+                    "__img": "circle1",
+                    "__size": [28, 28],
+                    "__ofs": [wp.x, wp.y, -20],
+                    "__physics": {
+                        "__isStatic": false,
+                        "__friction": 130,
+                        "__frictionAir": 0.2,
+                        "__frictionStatic": 500,
+                        "__restitution": 10,
+                        "__density": 4,
+                        "__bodyType": 1
                     }
                 }).update();
+
+                ScoreManager.shotsTotal++;
+
+                bullet.__hit = false;
 
                 if (bullet.__ph_body) {
                     ph_Body.setVelocity(bullet.__ph_body, velocity);
                 }
+
+                bullet.__onRemove = function() {
+                    if (!bullet.__hit) {
+                        ScoreManager.registerMiss();
+                    }
+                };
 
                 _setTimeout(function() {
                     bullet.__removeFromParent();

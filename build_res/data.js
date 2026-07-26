@@ -33,61 +33,72 @@
 "layouts/level_1.json":[
   {
     "name": "level_1",
-    "__size": [
-      1234,
-      768
-    ],
+    "__size": [1234, 768],
+
     "__childs": {
+
+      "scoreLabel": {
+        "__type": "text",
+        "__text": "Score: 0",
+        "__fontsize": 48,
+        "__color": "#ffffff",
+        "__ofs": [-500, -330],
+        "__align": "left"
+      },
+
+      "hitsLabel": {
+        "__type": "text",
+        "__text": "Snowballs: 0",
+        "__fontsize": 42,
+        "__color": "#ffffff",
+        "__ofs": [-500, -280],
+        "__align": "left"
+      },
+
+      "missLabel": {
+        "__type": "text",
+        "__text": "Misses: 0",
+        "__fontsize": 42,
+        "__color": "#ffffff",
+        "__ofs": [-500, -230],
+        "__align": "left"
+      },
+
       "sky": {
         "__color": "#7ea2ff",
-        "__size": [
-          1,
-          1,
-          1,
-          1
-        ]
+        "__size": [1, 1, 1, 1]
       },
+
       "userInputArea": {
         "__color": "#5f12e9",
         "sha": 0,
         "sva": 2,
-        "__size": [
-          140,
-          100
-        ],
-        "__ofs": [
-          105,
-          -96,
-          -15
-        ],
+        "__size": [140, 100],
+        "__ofs": [105, -96, -15],
+
         "__childs": {
           "_0": {
             "__color": "#fb22a0",
             "__rotate": 3.9,
-            "__size": [
-              25,
-              25
-            ],
+            "__size": [25, 25],
+
             "__childs": {
               "rubber": {
                 "__color": "#362207",
                 "sha": 2,
                 "sva": 1,
-                "__size": [
-                  148,
-                  18
-                ]
+                "__size": [148, 18]
               }
             }
           }
         }
       },
+
       "ph_world": {
-        "__size": [
-          1,
-          1
-        ],
+        "__size": [1, 1],
+
         "__childs": {
+
           "_0": {
             "__physics": {
               "__isStatic": false,
@@ -99,11 +110,9 @@
               "__bodyType": 0
             },
             "__img": "block_1",
-            "__ofs": [
-              296,
-              -16
-            ]
+            "__ofs": [296, -16]
           },
+
           "ground": {
             "__color": "#296b22",
             "__physics": {
@@ -115,12 +124,10 @@
               "__density": 1,
               "__bodyType": 0
             },
-            "__size": [
-              1234,
-              211
-            ],
+            "__size": [1234, 211],
             "__y": 395
           },
+
           "_2": {
             "__physics": {
               "__isStatic": false,
@@ -132,11 +139,9 @@
               "__bodyType": 0
             },
             "__img": "block_2",
-            "__ofs": [
-              299,
-              86
-            ]
+            "__ofs": [299, 86]
           },
+
           "_3": {
             "__physics": {
               "__isStatic": false,
@@ -148,11 +153,9 @@
               "__bodyType": 0
             },
             "__img": "block_3",
-            "__ofs": [
-              192,
-              207
-            ]
+            "__ofs": [192, 207]
           },
+
           "_4": {
             "__physics": {
               "__isStatic": false,
@@ -164,11 +167,9 @@
               "__bodyType": 0
             },
             "__img": "block_3",
-            "__ofs": [
-              408,
-              207
-            ]
+            "__ofs": [408, 207]
           },
+
           "_5": {
             "__physics": {
               "__isStatic": false,
@@ -180,15 +181,10 @@
               "__bodyType": 1
             },
             "__img": "block_4",
-            "__size": [
-              126,
-              126
-            ],
-            "__ofs": [
-              56,
-              224
-            ]
+            "__size": [126, 126],
+            "__ofs": [56, 224]
           },
+
           "wall": {
             "__color": "#296b22",
             "__physics": {
@@ -200,20 +196,15 @@
               "__density": 1,
               "__bodyType": 0
             },
-            "__size": [
-              65,
-              689
-            ],
-            "__ofs": [
-              585,
-              -44
-            ]
+            "__size": [65, 689],
+            "__ofs": [585, -44]
           }
         }
       }
     }
   }
 ]
+
 ,
 "layouts/level_2.json":[
   {
@@ -223,6 +214,34 @@
       768
     ],
     "__childs": {
+
+      "scoreLabel": {
+        "__type": "text",
+        "__text": "Score: 0",
+        "__fontsize": 48,
+        "__color": "#ffffff",
+        "__ofs": [0, -330],
+        "__align": "left"
+      },
+
+      "hitsLabel": {
+        "__type": "text",
+        "__text": "Snowballs: 0",
+        "__fontsize": 42,
+        "__color": "#ffffff",
+        "__ofs": [0, -280],
+        "__align": "left"
+      },
+
+      "missLabel": {
+        "__type": "text",
+        "__text": "Misses: 0",
+        "__fontsize": 42,
+        "__color": "#ffffff",
+        "__ofs": [0, -230],
+        "__align": "left"
+      },
+
       "sky": {
         "__color": "#7ea2ff",
         "__size": [
@@ -433,6 +452,34 @@
       768
     ],
     "__childs": {
+
+      "scoreLabel": {
+        "__type": "text",
+        "__text": "Score: 0",
+        "__fontsize": 48,
+        "__color": "#ffffff",
+        "__ofs": [0, -330],
+        "__align": "left"
+      },
+
+      "hitsLabel": {
+        "__type": "text",
+        "__text": "Snowballs: 0",
+        "__fontsize": 42,
+        "__color": "#ffffff",
+        "__ofs": [0, -280],
+        "__align": "left"
+      },
+
+      "missLabel": {
+        "__type": "text",
+        "__text": "Misses: 0",
+        "__fontsize": 42,
+        "__color": "#ffffff",
+        "__ofs": [0, -230],
+        "__align": "left"
+      },
+
       "sky": {
         "__color": "#7ea2ff",
         "__size": [
@@ -662,31 +709,15 @@
     "name": "win",
     "__alpha": 0.8,
     "__alphaDeep": 0,
-    "__size": [
-      2,
-      2,
-      1,
-      1
-    ],
+    "__size": [2, 2, 1, 1],
+
     "__keyframes": {
       "loop": 0,
       "__loopDisabled": 1,
       "__track": {
         "__transform": {
-          "0": [
-            0,
-            0,
-            0.6,
-            0.6,
-            0
-          ],
-          "17": [
-            0,
-            0,
-            1,
-            1,
-            0
-          ]
+          "0": [0, 0, 0.6, 0.6, 0],
+          "17": [0, 0, 1, 1, 0]
         },
         "__alphaDeep": {
           "0": 0,
@@ -694,13 +725,12 @@
         }
       }
     },
+
     "__childs": {
+
       "title": {
         "sva": 0.9,
-        "__size": [
-          431,
-          90
-        ],
+        "__size": [431, 90],
         "__scaleF": 0,
         "__text": {
           "__fontsize": 80,
@@ -713,69 +743,31 @@
           "__easing": 27,
           "__track": {
             "__transform": {
-              "0": [
-                0,
-                -327.829,
-                0,
-                0,
-                0
-              ],
-              "73": [
-                0,
-                -154,
-                1,
-                1,
-                0
-              ]
+              "0": [0, -327.829, 0, 0, 0],
+              "73": [0, -154, 1, 1, 0]
             }
           }
         }
       },
+
       "stars": {
-        "__size": [
-          297,
-          68
-        ],
+        "__size": [297, 68],
         "__childs": {
           "_0": {
             "__img": "star",
             "sva": 1.1,
-            "__size": [
-              100,
-              100
-            ],
+            "__size": [100, 100],
             "__scaleF": 0,
-            "__ofs": [
-              -13,
-              -18
-            ],
+            "__ofs": [-13, -18],
             "__keyframes": {
               "loop": 0,
               "__loopDisabled": 1,
               "__easing": 6,
               "__track": {
                 "__transform": {
-                  "0": [
-                    -13,
-                    -18,
-                    0,
-                    0,
-                    0
-                  ],
-                  "14": [
-                    -13,
-                    -18,
-                    0,
-                    0,
-                    0
-                  ],
-                  "82": [
-                    -13,
-                    -18,
-                    1,
-                    1,
-                    0
-                  ]
+                  "0": [-13, -18, 0, 0, 0],
+                  "14": [-13, -18, 0, 0, 0],
+                  "82": [-13, -18, 1, 1, 0]
                 }
               }
             }
@@ -784,42 +776,18 @@
             "__rotate": -13.21,
             "__img": "star",
             "sva": 1.1,
-            "__size": [
-              100,
-              100
-            ],
+            "__size": [100, 100],
             "__scaleF": 0.8,
-            "__ofs": [
-              92,
-              10
-            ],
+            "__ofs": [92, 10],
             "__keyframes": {
               "loop": 0,
               "__loopDisabled": 1,
               "__easing": 6,
               "__track": {
                 "__transform": {
-                  "0": [
-                    92,
-                    10,
-                    0,
-                    0,
-                    -13.21
-                  ],
-                  "23": [
-                    92,
-                    10,
-                    0,
-                    0,
-                    -13.21
-                  ],
-                  "82": [
-                    92,
-                    10,
-                    0.8,
-                    0.8,
-                    -13.21
-                  ]
+                  "0": [92, 10, 0, 0, -13.21],
+                  "23": [92, 10, 0, 0, -13.21],
+                  "82": [92, 10, 0.8, 0.8, -13.21]
                 }
               }
             }
@@ -828,54 +796,57 @@
             "__rotate": 10.87,
             "__img": "star",
             "sva": 1.1,
-            "__size": [
-              100,
-              100
-            ],
+            "__size": [100, 100],
             "__scaleF": 0,
-            "__ofs": [
-              -114,
-              4
-            ],
+            "__ofs": [-114, 4],
             "__keyframes": {
               "loop": 0,
               "__loopDisabled": 1,
               "__easing": 6,
               "__track": {
                 "__transform": {
-                  "0": [
-                    -114,
-                    4,
-                    0,
-                    0,
-                    10.87
-                  ],
-                  "47": [
-                    -114,
-                    4,
-                    0.8,
-                    0.8,
-                    10.87
-                  ]
+                  "0": [-114, 4, 0, 0, 10.87],
+                  "47": [-114, 4, 0.8, 0.8, 10.87]
                 }
               }
             }
           }
         }
       },
+
+      "scoreText": {
+        "__type": "text",
+        "__text": "Score: 0",
+        "__fontsize": 48,
+        "__color": "#ffffff",
+        "__ofs": [0, 80],
+        "__align": "center"
+      },
+
+      "hitsText": {
+        "__type": "text",
+        "__text": "Hits: 0",
+        "__fontsize": 42,
+        "__color": "#ffffff",
+        "__ofs": [0, 140],
+        "__align": "center"
+      },
+
+      "missText": {
+        "__type": "text",
+        "__text": "Misses: 0",
+        "__fontsize": 42,
+        "__color": "#ffffff",
+        "__ofs": [0, 200],
+        "__align": "center"
+      },
+
       "button": {
         "__color": "#832aa0",
         "__img": "circle1",
         "sva": 1.3,
-        "__corner": [
-          11,
-          11
-        ],
-        "__onTap": "M.openLevel('level_2')",
-        "__size": [
-          321,
-          94
-        ],
+        "__corner": [11, 11],
+        "__size": [321, 94],
         "__scaleF": 0,
         "__text": {
           "__text": "Next level"
@@ -886,20 +857,8 @@
           "__easing": 27,
           "__track": {
             "__transform": {
-              "0": [
-                0,
-                307.166,
-                0,
-                0,
-                0
-              ],
-              "84": [
-                0,
-                0,
-                1,
-                1,
-                0
-              ]
+              "0": [0, 307.166, 0, 0, 0],
+              "84": [0, 0, 1, 1, 0]
             }
           }
         }

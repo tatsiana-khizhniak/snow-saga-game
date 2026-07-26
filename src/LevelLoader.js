@@ -6,6 +6,8 @@ var LevelLoader = {
             Game.level = null;
         }
 
+        ScoreManager.startLevel(index);
+
         var levelName = "level_" + index;
         var node = scene.__addChildBox(levelName);
 
