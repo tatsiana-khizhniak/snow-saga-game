@@ -6,41 +6,30 @@
       768
     ],
     "__childs": {
-
       "scoreLabel": {
-        "__type": "text",
-        "__text": "Score: 0",
-        "__fontsize": 48,
-        "__color": "#ffffff",
-        "__ofs": [0, -330],
-        "__align": "left"
+        "__text": {
+          "__text": "Score: 0"
+        },
+        "__y": -330
       },
-
       "hitsLabel": {
-        "__type": "text",
-        "__text": "Snowballs: 0",
-        "__fontsize": 42,
-        "__color": "#ffffff",
-        "__ofs": [0, -280],
-        "__align": "left"
+        "__text": {
+          "__text": "Snowballs: 0"
+        },
+        "__y": -280
       },
-
       "missLabel": {
-        "__type": "text",
-        "__text": "Misses: 0",
-        "__fontsize": 42,
-        "__color": "#ffffff",
-        "__ofs": [0, -230],
-        "__align": "left"
+        "__text": {
+          "__text": "Misses: 0"
+        },
+        "__y": -230
       },
-
       "sky": {
         "__color": "#7ea2ff",
+        "__img": "sky",
         "__size": [
-          1,
-          1,
-          1,
-          1
+          1234,
+          768
         ]
       },
       "userInputArea": {
@@ -95,7 +84,7 @@
               "__bodyType": 0
             },
             "__rotate": -45,
-            "__img": "block_1",
+            "__img": "bigblock_1",
             "__size": [
               139,
               66
@@ -106,7 +95,6 @@
             ]
           },
           "ground1": {
-            "__color": "#296b22",
             "__physics": {
               "__isStatic": true,
               "__friction": 10,
@@ -116,11 +104,15 @@
               "__density": 1,
               "__bodyType": 0
             },
+            "__img": "ground",
             "__size": [
               1234,
-              197
+              98
             ],
-            "__y": 395
+            "__ofs": [
+              1,
+              337
+            ]
           },
           "_2": {
             "__physics": {
@@ -132,7 +124,7 @@
               "__density": 1,
               "__bodyType": 0
             },
-            "__img": "block_2",
+            "__img": "bigblock_2",
             "__ofs": [
               380,
               -188
@@ -148,7 +140,7 @@
               "__density": 1,
               "__bodyType": 0
             },
-            "__img": "block_3",
+            "__img": "bigblock_3",
             "__ofs": [
               175,
               -77
@@ -164,7 +156,7 @@
               "__density": 1,
               "__bodyType": 0
             },
-            "__img": "block_3",
+            "__img": "bigblock_3",
             "__ofs": [
               431,
               -78
@@ -180,7 +172,7 @@
               "__density": 1,
               "__bodyType": 1
             },
-            "__img": "block_4",
+            "__img": "bigblock_4",
             "__size": [
               126,
               126
@@ -190,28 +182,7 @@
               -290
             ]
           },
-          "wall": {
-            "__color": "#296b22",
-            "__physics": {
-              "__isStatic": true,
-              "__friction": 10,
-              "__frictionAir": 1,
-              "__frictionStatic": 50,
-              "__restitution": 0,
-              "__density": 1,
-              "__bodyType": 0
-            },
-            "__size": [
-              65,
-              689
-            ],
-            "__ofs": [
-              585,
-              -44
-            ]
-          },
           "ground2": {
-            "__color": "#296b22",
             "__physics": {
               "__isStatic": true,
               "__friction": 10,
@@ -221,16 +192,46 @@
               "__density": 1,
               "__bodyType": 0
             },
+            "__img": "ground",
             "__size": [
               621,
               55
             ],
             "__ofs": [
-              243,
-              29
+              308,
+              26
             ]
           }
         }
+      },
+      "wall": {
+        "__anchor": {
+          "y": 0
+        },
+        "__physics": {
+          "__isStatic": true,
+          "__friction": 10,
+          "__frictionAir": 1,
+          "__frictionStatic": 50,
+          "__restitution": 0,
+          "__density": 1,
+          "__bodyType": 0
+        },
+        "__margin": [
+          -5,
+          0,
+          0,
+          0
+        ],
+        "__img": "ground",
+        "__size": [
+          65,
+          670
+        ],
+        "__ofs": [
+          585,
+          -47
+        ]
       }
     }
   }

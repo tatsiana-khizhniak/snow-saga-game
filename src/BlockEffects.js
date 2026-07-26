@@ -1,6 +1,7 @@
 var BlockEffects = {
 
     destroyBlock: function(block) {
+      if (!block || !block.__ph_body) return; 
         var size = block.__size;
         var v = block.__ph_body.velocity;
 

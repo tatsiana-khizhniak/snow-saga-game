@@ -1,11 +1,9 @@
 var blocks = [];
-var big_blocks = 0;
 
 function looperPostOne(f, delay) {
     if (f.__posted > 0) {
         f.__posted = _clearTimeout(f.__posted);
     }
-
     if (!f.__posted) {
         if (delay) {
             f.__posted = _setTimeout(function() {
@@ -22,54 +20,75 @@ function looperPostOne(f, delay) {
     }
 }
 
+// Исправленная функция расчета скорости (защита от Z error)
 function relImpactSpeed(bodyA, bodyB) {
+    if (!bodyA || !bodyB || !bodyA.velocity || !bodyB.velocity) {
+        return 0;
+    }
     var va = bodyA.velocity;
     var vb = bodyB.velocity;
-    var v = new Vector2(va.x - vb.x, va.y - vb.y);
-    return v.__length();
+    var vx = (va.x || 0) - (vb.x || 0);
+    var vy = (va.y || 0) - (vb.y || 0);
+    return new Vector2(vx, vy).__length();
 }
 
 function awakeBlocks() {
     $each(blocks, function(b) {
-        b.__ph_awake();
+        if (b && b.__ph_awake) b.__ph_awake();
     });
 }
 
+// Исправленная функция удаления блока (с восстановленным циклом осколков)
 function removeBlock(block) {
+    if (!block || block.__destructed) return;
+
     removeFromArray(block, blocks);
 
-    var size = block.__size;
-    var v = block.__ph_body.velocity;
+    // Сохраняем данные для создания осколков ПЕРЕД удалением
+    var size = { x: block.__size.x, y: block.__size.y };
+    var pos = { x: block.__x, y: block.__y };
+    var v = { x: 0, y: 0 };
+    if (block.__ph_body && block.__ph_body.velocity) {
+        v.x = block.__ph_body.velocity.x;
+        v.y = block.__ph_body.velocity.y;
+    }
 
+    var needsBreaks = block.__needBreaks;
+    var isShard = block.__isShard;
+
+    block.__destructed = true;
     block.__removeFromParent();
 
     looperPostOne(awakeBlocks);
 
-    ScoreManager.addBlockScore();
+    // Если это большая глыба (не осколок)
+    if (!isShard) {
+        ScoreManager.addBlockScore();
 
-    if (block.__needBreaks) {
+        if (needsBreaks) {
+            SoundManager.playRandomBreak();
 
-        SoundManager.playRandomBreak();
+            // --- ВОССТАНОВЛЕННЫЙ ЦИКЛ СОЗДАНИЯ ОСКОЛКОВ ---
+            var step = 50;
+            var bx = pos.x - size.x / 2;
+            var by = pos.y - size.y / 2;
 
-        var step = 50;
-        var bx = block.__x - size.x / 2;
-        var by = block.__y - size.y / 2;
+            for (var x = 0; x < size.x; x += step) {
+                for (var y = 0; y < size.y; y += step) {
+                    addBreakBlock(bx + x, by + y, v);
+                }
+            }
+            // ----------------------------------------------
 
-        for (var x = 0; x < size.x; x += step) {
-            for (var y = 0; y < size.y; y += step) {
-                addBreakBlock(bx + x, by + y, v);
+            PhysicsCore.big_blocks--;
+            if (PhysicsCore.big_blocks <= 0) {
+                _setTimeout(function() {
+                    Game.win();
+                }, 1);
             }
         }
-
-        big_blocks--;
-
-        if (big_blocks === 0) {
-            _setTimeout(function() {
-                Game.win();
-            }, 1);
-        }
-
     } else {
+        // Если это сам осколок, просто иногда играем звук
         if (random() > 0.5 && !windowManager.__hasOpenedWindow()) {
             SoundManager.playRandomBreak();
         }
@@ -91,6 +110,10 @@ function addBreakBlock(x, y, velocity) {
             "__bodyType": 1
         }
     });
+
+    // Помечаем, что это осколок (для ScoreManager и коллизий)
+    breack_block.__isShard = true;
+    if (breack_block.__ph_body) breack_block.__ph_body.__isShard = true;
 
     looperPost(function() {
         if (breack_block.__ph_body) {
@@ -119,12 +142,15 @@ function addBreakBlock(x, y, velocity) {
 
 function initCollision(body, node, hp) {
     blocks.push(node);
-
     body.__hp = hp;
     node.__hitRegistered = false;
 
-    body.__onCollision = function(speed) {
-        if (!node.__hitRegistered) {
+    body.__onCollision = function(speed, other) {
+        // Осколки не наносят урон
+        if (other && other.__isShard) return;
+
+        // Регистрация попадания только для крупных блоков
+        if (!node.__hitRegistered && !node.__isShard) {
             node.__hitRegistered = true;
             ScoreManager.registerHit();
         }
@@ -133,10 +159,8 @@ function initCollision(body, node, hp) {
 
         if (dmg && body.__hp) {
             body.__hp = Math.max(0, body.__hp - dmg);
-
             if (!body.__hp) {
                 body.__onCollision = null;
-
                 looperPost(function() {
                     removeBlock(node);
                 });
@@ -146,6 +170,7 @@ function initCollision(body, node, hp) {
 }
 
 var PhysicsCore = {
+    big_blocks: 0,
     initCollision: initCollision,
     removeBlock: removeBlock,
     relImpactSpeed: relImpactSpeed,

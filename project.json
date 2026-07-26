@@ -39,7 +39,6 @@
             "RubberController.js",
             "PhysicsEvents.js",
             "SoundManager.js",
-            "utils.js",
             "PhysicsCore.js",
             "ScoreManager.js"
         ],
@@ -99,6 +98,7 @@
             "layout",
             "level_1.json",
             "level_2.json",
+            "level_3.json",
             "win.json"
         ],
         [
@@ -138,8 +138,8 @@
                 "type": "atlas",
                 "description": "Основной атлас для игры",
                 "name": "atlas", 
-                "width": 512,
-                "height": 512,
+                "width": 2048,
+                "height": 2048,
                 "src": "/var/www/html/editor/projects/tz_template/img/*.*",
                 "rename": 1,
                 "dst": "build_res/", 

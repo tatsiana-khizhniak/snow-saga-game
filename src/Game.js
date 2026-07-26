@@ -53,16 +53,21 @@ var Game = {
                     missText: { __text: "Total Misses: " + total.misses },
 
                     button: {
+                         __text: Game.currentLevelIndex === 3 ? "Play again" : "Next level",
+
                         __onTap: function() {
-                            wnd.__close();
+                            if (Game.currentLevelIndex === 3) {
                             Game.currentLevelIndex = 1;
-                            Game.loadLevel(1);
+                        } else {
+                            Game.currentLevelIndex++;
+                        }
+                            wnd.__close();
+                            Game.loadLevel(Game.currentLevelIndex);
                         },
                         __onTapHighlight: 1
                     }
                 });
             });
-
             return;
         }
 
