@@ -33,42 +33,42 @@
 "layouts/level_1.json":[
   {
     "name": "level_1",
-    "__size": [1234, 768],
-
+    "__size": [
+      1234,
+      768
+    ],
     "__childs": {
-
       "scoreLabel": {
-        "__type": "text",
-        "__text": "Score: 0",
-        "__fontsize": 48,
-        "__color": "#ffffff",
-        "__ofs": [-500, -330],
-        "__align": "left"
+        "__text": {
+          "__text": "Score: 0"
+        },
+        "__ofs": [
+          -500,
+          -330
+        ]
       },
-
       "hitsLabel": {
-        "__type": "text",
-        "__text": "Snowballs: 0",
-        "__fontsize": 42,
-        "__color": "#ffffff",
-        "__ofs": [-500, -280],
-        "__align": "left"
+        "__text": {
+          "__text": "Snowballs: 0"
+        },
+        "__ofs": [
+          -500,
+          -280
+        ]
       },
-
       "missLabel": {
-        "__type": "text",
-        "__text": "Misses: 0",
-        "__fontsize": 42,
-        "__color": "#ffffff",
-        "__ofs": [-500, -230],
-        "__align": "left"
+        "__text": {
+          "__text": "Misses: 0"
+        },
+        "__ofs": [
+          -500,
+          -230
+        ]
       },
-
       "sky": {
         "__color": "#7ea2ff",
         "__size": [1, 1, 1, 1]
       },
-
       "userInputArea": {
         "__color": "#5f12e9",
         "sha": 0,
@@ -93,12 +93,10 @@
           }
         }
       },
-
       "ph_world": {
         "__size": [1, 1],
 
         "__childs": {
-
           "_0": {
             "__physics": {
               "__isStatic": false,
@@ -112,9 +110,8 @@
             "__img": "block_1",
             "__ofs": [296, -16]
           },
-
           "ground": {
-            "__color": "#296b22",
+            "__color": "#1ba759",
             "__physics": {
               "__isStatic": true,
               "__friction": 10,
@@ -127,7 +124,6 @@
             "__size": [1234, 211],
             "__y": 395
           },
-
           "_2": {
             "__physics": {
               "__isStatic": false,
@@ -141,7 +137,6 @@
             "__img": "block_2",
             "__ofs": [299, 86]
           },
-
           "_3": {
             "__physics": {
               "__isStatic": false,
@@ -155,7 +150,6 @@
             "__img": "block_3",
             "__ofs": [192, 207]
           },
-
           "_4": {
             "__physics": {
               "__isStatic": false,
@@ -169,7 +163,6 @@
             "__img": "block_3",
             "__ofs": [408, 207]
           },
-
           "_5": {
             "__physics": {
               "__isStatic": false,
@@ -184,7 +177,6 @@
             "__size": [126, 126],
             "__ofs": [56, 224]
           },
-
           "wall": {
             "__color": "#296b22",
             "__physics": {
@@ -204,7 +196,6 @@
     }
   }
 ]
-
 ,
 "layouts/level_2.json":[
   {

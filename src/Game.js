@@ -49,7 +49,7 @@ var Game = {
             showWindow('win', function(wnd) {
                 wnd.__setAliasesData({
                     scoreText: { __text: "Total Score: " + total.score },
-                    hitsText: { __text: "Total Throws: " + total.hits },
+                    hitsText: { __text: "Total Snowballs: " + total.hits },
                     missText: { __text: "Total Misses: " + total.misses },
 
                     button: {
@@ -74,7 +74,7 @@ var Game = {
         showWindow('win', function(wnd) {
             wnd.__setAliasesData({
                 scoreText: { __text: "Score: " + stats.score },
-                hitsText: { __text: "Throws: " + ScoreManager.shotsTotal },
+                hitsText: { __text: "Snowballs: " + ScoreManager.shotsTotal },
                 missText: { __text: "Misses: " + ScoreManager.shotsMissed },
 
                 button: {
