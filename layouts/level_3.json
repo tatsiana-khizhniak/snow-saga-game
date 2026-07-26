@@ -33,7 +33,7 @@
         ]
       },
       "userInputArea": {
-        "__color": "#5f12e9",
+        "__img": "y",
         "sha": 0,
         "sva": 2,
         "__size": [
@@ -52,6 +52,10 @@
             "__size": [
               25,
               25
+            ],
+            "__ofs": [
+              32,
+              -37
             ],
             "__childs": {
               "rubber": {
